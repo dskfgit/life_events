@@ -208,7 +208,6 @@ class _LifeEventsState extends State<LifeEvents> {
                               LifeEventDetailScreen(lifeEvent: le, otd: otd)),
                     );
                   },
-                  }
                 );
               });
         });
