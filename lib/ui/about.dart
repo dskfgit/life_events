@@ -24,7 +24,8 @@ class AboutPage extends StatelessWidget {
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
                         ),
-                        text: "About Life Events")),
+                        text: "About Life Events")
+                ),
               ],
             ),
             Row(
@@ -36,7 +37,7 @@ class AboutPage extends StatelessWidget {
             Row(
               children: [
                 Icon(Icons.auto_awesome),
-                Flexible( child: Text("Thank you to albin.post@gmail.com for Wikipedia, On this Day (https://byabbe.se/)")),
+                Flexible(child: Text("Thank you to albin.post@gmail.com for Wikipedia, On this Day (https://byabbe.se/)")),
               ],
             ),
             Row(

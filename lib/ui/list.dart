@@ -33,6 +33,8 @@ class _LifeEventsState extends State<LifeEvents> {
     //clearDatabase();
     //_body = _buildLifeEvents();
 
+    double cWidth = MediaQuery.of(context).size.width * 0.9;
+
     Icon filter = Icon(Icons.filter_alt_outlined);
 
     if (currFilter != LifeEvent.typeAll) {
@@ -75,14 +77,17 @@ class _LifeEventsState extends State<LifeEvents> {
               decoration: BoxDecoration(color: AppColours.appBackgroundColour),
               padding: EdgeInsets.all(0),
             ),
-            Flexible(
-                child: Container(
-              child: Text(
-                  "Record the things that matter most, and see what happened on the same day in history!",
-                  style: TextStyle(color: Colors.black, fontSize: 14)),
+            Container(
               padding: EdgeInsets.all(10),
-            )),
-            //"Record the things that matter most, and see what happened on the same day in history!"
+              width: cWidth,
+              child: Column(children: [
+                Flexible(
+                    flex: 0,
+                    child: Text(
+                        "Record the things that matter most, and see what happened on the same day in history!",
+                        style: TextStyle(color: Colors.black, fontSize: 14))),
+              ]),
+            ),
             ListTile(
               leading: Icon(FlutterIcons.md_save_ion),
               title: Text('Export your life events'),
@@ -203,6 +208,7 @@ class _LifeEventsState extends State<LifeEvents> {
                               LifeEventDetailScreen(lifeEvent: le, otd: otd)),
                     );
                   },
+                  }
                 );
               });
         });
